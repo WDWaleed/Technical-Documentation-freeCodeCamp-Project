@@ -9,7 +9,7 @@
 }
 
 :root {
-  --code-bg: #f7f7f7;
+  --code-bg: hsl(0, 0%, 95%);
   --text: #4d4e53;
   --code-font: Consolas, monospace;
 }
@@ -18,4 +18,77 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  color: --text;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 2rem;
+}
+
+.main-section header {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.main-section p,
+ul {
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+ul li {
+  margin-left: 2.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+code {
+  display: block;
+  padding: 1rem;
+  line-height: 1.5;
+  margin-left: 0.75rem;
+  margin-top: 0.75rem;
+  font-family: var(--code-font);
+  background-color: var(--code-bg);
+}
+
+#navbar {
+  border-bottom: 2px solid var(--text);
+  padding: 1rem 2rem;
+}
+
+#navbar header {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#navbar ul li {
+  list-style-type: none;
+  margin-left: 0;
+  border-top: 1px solid var(--text);
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+@media screen and (width > 768px) {
+  #container {
+    flex-direction: row;
+  }
+
+  #navbar {
+    width: fit-content;
+    min-width: 425px;
+    border-right: 2px solid var(--text);
+    border-bottom: none;
+  }
 }
